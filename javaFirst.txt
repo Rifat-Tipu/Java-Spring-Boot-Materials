@@ -44,7 +44,7 @@ public class Main {
     car.setSpeed(400);
     System.out.println("Top speed of the Car is "+car.getSpeed());
     Calling Inner Class
-     car.Supra s=car.new Supra();
+     Car.Supra s=car.new Supra();
      s.innerSupra();
     }
 }
