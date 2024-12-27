@@ -1,0 +1,79 @@
+// Object passing
+
+// Main class
+
+public class Regular {
+    
+    public static void main(String[] args){
+        InputDTO in=new InputDTO();
+        in.setName("Rifat");
+        ObjectInOutEx ex=new ObjectInOutEx();
+        System.out.println(ex.getInputDetails(in).getName());
+    }
+    
+}
+
+// Class InputDTO
+
+public class InputDTO {
+    private String name;
+    private int age;
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+    
+    
+    
+}
+
+//OutputDTO
+
+public class OutputDTO {
+    private String name;
+    private int age;
+  
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+}
+
+// ObjectInOutEx
+
+public class ObjectInOutEx {
+    public OutputDTO getInputDetails(InputDTO input){
+       // System.out.println("Input details: "+input.getName());
+        
+        OutputDTO out=new OutputDTO();
+        out.setName(input.getName());
+     
+        return out;
+        
+    }
+    
+}
