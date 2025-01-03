@@ -1,0 +1,127 @@
+		// Main Class
+
+ public static void main(String[] args) {
+    
+ ObjectPassing op=new ObjectPassing();
+ op.setName("TIPU");
+       op.print();
+       Object2 o2=new Object2();
+        op.Show(o2);
+        o2.print2();
+          
+        
+    }
+
+ // 2nd class
+
+public class ObjectPassing {
+    
+   private String name;
+   
+    void setName(String name)
+    {
+        this.name=name;
+    }
+    String getName() 
+    {
+        return name;
+    }
+    void print()
+    {
+        System.out.println("object passing1: "+name);
+    }
+   void Show(Object2 a)
+    {
+        a.SetName("Rifat");
+      
+       
+    }
+    
+    
+}
+ 
+// 3rd
+
+public class Object2 {
+    
+       private String name;
+   
+    void SetName(String name)
+    {
+        this.name=name;
+    }
+    String getName() 
+    {
+        return name;
+    }
+    void print2()
+    {
+        System.out.println("Name from ob2: "+name);
+    }
+    
+     
+}
+
+// object passing
+
+public class IputDTO {
+    private String name;
+    
+     public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+    
+      public static void main(String[] args)
+    {
+        objEx ex=new objEx();
+        IputDTO dd=new IputDTO();
+        dd.setName("Rifat");
+        ex.transform(dd);
+    }
+    
+}
+class objEx{
+    public IputDTO transform(IputDTO i)
+    {
+            IputDTO dt=new IputDTO();
+        dt.setName(i.getName());
+        System.out.println("Name is: "+i.getName());
+        System.out.println("Name is: "+dt.getName());
+        
+        return dt;
+    }
+   
+   
+   
+}
+ 
+// Genericss
+
+class Test<T>{
+  private T ob1;
+  public Test(T ob1)
+  {
+      this.ob1=ob1;
+  }
+  T getobject() 
+  {
+      return ob1;
+  }
+}
+
+public class GenericsClass {
+    
+    public static void main(String[] args)
+    {
+        Test<Integer>ob=new Test<Integer>(17);
+        System.out.println("Output: "+ob.getobject());
+        
+         Test<String>ob2=new Test<String>("Rifat");
+        System.out.println("Output: "+ob2.getobject());
+    }
+}
+
